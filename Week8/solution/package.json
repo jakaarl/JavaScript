@@ -3,15 +3,18 @@
   "version": "1.0.0",
   "description": "HackYourFuture Wk8Step3",
   "scripts": {
-    "pretest": "eslint public/scripts",
+    "prestart": "browserify sources/main.js -o public/scripts/app.js",
+    "pretest": "eslint sources",
     "start": "http-server -c-1 public",
     "test": "mocha tests"
   },
   "author": "Jani Kaarela",
   "license": "ISC",
   "devDependencies": {
+    "browserify": "^16.1.1",
     "eslint": "^4.18.2",
     "http-server": "^0.11.1",
-    "mocha": "^5.0.3"
+    "mocha": "^5.0.3",
+    "sinon": "^4.4.2"
   }
 }
